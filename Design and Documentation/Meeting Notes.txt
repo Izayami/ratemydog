@@ -1,0 +1,10 @@
+Meeting 9/25
+Andres is examining tutorials on basic HTML/CSS.
+J is researching Cookie/Login solutions.
+Mikey is looking into solving Frontend Scripting solutions.
+Colin is pursuing database/site interaction. Reminded cohorts he is available to help with other tasks if needed.
+Brian was absent (expected) and assumed to still be researching Database integration.
+Note made for researchers to make dummy test pages to test their actions without conflicts.
+Reminder to pull and push Git regularly.
+Total time ~45 minutes
+
