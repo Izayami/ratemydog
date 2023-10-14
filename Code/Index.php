@@ -1,6 +1,15 @@
+<?php
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Rate My Dog</title>
 <script>
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
