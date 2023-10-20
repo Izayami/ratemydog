@@ -16,7 +16,7 @@
 </head>
 <body>
     <h2>Login Success</h2>
-    <?php echo $row['user_email']; ?>
+    <?php echo $row['Email']; ?>
     <br>
     <a href="logout.php">Logout</a>
 </body>
