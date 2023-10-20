@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--background for webpage-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate my Dog</title>
+	<link rel="icon"  href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="login">
+        <nav>
+            <!--logo-->
+            <a href="index.html"><img src="images/newlogo2.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <!--close icon-->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <!--Toolbar-->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="My Profile">My Profile</a></li>
+                    <li><a href="postdog.html">Post</a></li>
+                    <li><a href="RANDOM DOG">Random Dog</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="CONTACT US">Contact Us</a></li>
+                </ul>
+            </div>
+            <!--Menu-->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <!--title-->
+        <h1>Account Login</h1>
+    </section>
+    
+    <!-- Login Form -->
+    <section class="login-content">
+        <form class="login-form">
+            <h1>Welcome! Here you can Log in or sign up!</h1>
+
+            <!-- Input fields for login -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            
+            <!-- Buttons for login and creating an account -->
+            <div class="buttons">
+                <input type="submit" value="Login" class="login-btn">
+                <a href="createaccount.html" class="create-account-btn">Create Account</a>
+            </div>
+        </form>aw
+    </section>
+    
+    <!-- Javascript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        /* Adding and removing menu for mobile */
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "200px";
+        }
+    </script>
+</body>
+</html>
