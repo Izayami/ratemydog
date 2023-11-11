@@ -1,8 +1,6 @@
 <?php
-$host = 'localhost';
-$username = 'id21253754_ratemydog';
-$password = 'DBDog12!';
-$database = 'id21253754_dogdata';
+include("connection.php");
+include("functions.php");
 
 $mysqli = new mysqli($host, $username, $password, $database);
 
