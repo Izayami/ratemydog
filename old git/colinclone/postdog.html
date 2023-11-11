@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--background for webpage-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate my Dog</title>
+	<link rel="icon"  href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="postDog">
+        <nav>
+            <!--logo-->
+            <a href="index.html"><img src="images/newlogo2.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <!--close icon-->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <!--Toolbar-->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="My Profile">My Profile</a></li>
+                    <li><a href="postdog.html">Post</a></li>
+                    <li><a href="RANDOM DOG">Random Dog</a></li>
+                    <li><a href="login.php">Log In</a></li>
+                    <li><a href="CONTACT US">Contact Us</a></li>
+                </ul>
+            </div>
+            <!--Menu-->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <!--title-->
+        <h1>Post Your Dog</h1>
+    </section>
+    
+    <!-- Post Dog Content -->
+    <section class="postDog-content">
+        <div class="row">
+            <div class="postDog-col">
+                <h1>Welcome! Here you can post your dog!</h1>
+                
+                <!-- Include the form with input boxes here -->
+                <form name="frmPostdog" method="post" action="DogPost.php">
+
+                    <label for="txtName">Dog's Name:</label>
+                    <input type="text" id="txtName" name="txtName"><br><br>
+                    
+                    <label for="txtBreed">Dog's Breed:</label>
+                    <input type="text" id="txtBreed" name="txtBreed"><br><br>
+                    
+                    <label for="txtBio">About your Dog:<br></label>
+                    <textarea id="txtBio" name="txtBio" rows="4" cols="50"></textarea><br><br>
+					
+					<label for="txtPicture">Dog Photo Link:</label>
+                    <input type="text" id="txtPicture" name="txtPicture"><br><br>
+                    
+                    <input type="submit" name="Submit" id="Submit" value="Submit">
+                </form>
+            </div>
+            <div class="postDog-col"></div>
+        </div>
+    </section>
+    
+    <!-- Javascript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        /* Adding and removing menu for mobile */
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "200px";
+        }
+    </script>
+</body>
+</html>
+
+<?php
+
+// database connection code
+if(isset($_POST['txtName']))
+{
+include("connection.php");
+include("functions.php");
+//***
+
+//Get datas
+$txtName = $_POST['txtName'];
+$txtBreed = $_POST['txtBreed'];
+$txtBio = $_POST['txtBio'];
+$txtPicture = $_POST['txtPicture'];
+$UID = $user_data['UserID'];
+//***
+
+// Datas to SQL
+$sql = "INSERT INTO `Dog` (`Uploader_UserID`, `Name`, `Breed`, `Bio`, `Picture`, `Stars1`, `Stars2`, `Stars3`, `Stars4`, `Stars5`) VALUES ('$UID', '$txtName', '$txtBreed', '$txtBio', '$txtPicture', '0', '0', '0', '0', '0')";
+//***
+
+
+// Run it!
+$rs = mysqli_query($con, $sql);
+if($rs)
+{
+	echo "Registration Successful!";
+}
+}
