@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="leaderboardPage">
+        <nav>
+            <a href="index.html"><img src="images/newlogo2.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="myProfile.html">My Profile</a></li>
+                    <li><a href="postdog.html">Post</a></li>
+                    <li><a href="dogRatingPage.html">Rate a Dog</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="Log Out">Log Out</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Leaderboard</h1>
+    </section>
+    <div class="center">
+      <div class="top3">
+        <div class="two item">
+          <div class="pos">
+            2
+          </div>
+          <div class="pic" style=""></div> <!--img link here-->
+          <div class="name">
+            <!--name here-->
+          </div>
+          <div class="score">
+            <!--rating here-->
+          </div>
+        </div>
+        <div class="one item">
+          <div class="pos">
+            1
+          </div>
+          <div class="pic" style=""></div> <!--img link here-->
+          <div class="name">
+            <!--name here-->
+          </div>
+          <div class="score">
+            <!--rating here-->
+          </div>
+        </div>
+        <div class="three item">
+          <div class="pos">
+            3
+          </div>
+          <div class="pic" style=""></div> <!--img link here-->
+          <div class="name">
+            <!--name here-->
+          </div>
+          <div class="score">
+            <!--rating here-->
+          </div>
+        </div>
+      </div>
+      <div class="list">
+        <div class="item">
+          <div class="pos">
+            4
+          </div>
+          <div class="pic" style=""></div> <!--img link here-->
+          <div class="name">
+            <!--name here-->
+          </div>
+          <div class="score">
+            <!--rating here-->
+          </div>
+        </div>
+        <div class="item">
+          <div class="pos">
+            5
+          </div>
+          <div class="pic" style=""></div> <!--img link here-->
+          <div class="name">
+            <!--name here-->
+          </div>
+          <div class="score">
+            <!--rating here-->
+          </div>
+        </div>
+        <div class="item">
+          <div class="pos">
+            6
+          </div>
+          <div class="pic" style=""></div> <!--img link here-->
+          <div class="name">
+            <!--name here-->
+          </div>
+          <div class="score">
+            <!--rating here-->
+          </div>
+        </div>
+        <div class="item">
+          <div class="pos">
+            7
+          </div>
+          <div class="pic" style=""></div> <!--img link here-->
+          <div class="name">
+            <!--name here-->
+          </div>
+          <div class="score">
+            <!--rating here-->
+          </div>
+        </div>
+        <div class="item">
+          <div class="pos">
+            8
+          </div>
+          <div class="pic" style=""></div> <!--img link here-->
+          <div class="name">
+            <!--name here-->
+          </div>
+          <div class="score">
+            <!--rating here-->
+          </div>
+        </div>
+      </div>
+    </div>    
+
+    
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "200px";
+        }
+    </script>
+</body>
+</html>
